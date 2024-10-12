@@ -1,2 +1,2 @@
 # GSlicer
-Automated Testing Tool for Graph-processing Systems.
+An automated Testing Tool for Graph-processing Systems.
