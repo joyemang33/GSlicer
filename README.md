@@ -1,2 +1,73 @@
 # GSlicer
-An automated Testing Tool for Graph-processing Systems.
+
+An automated testing tool for graph-processing systems.
+
+## 🚀 Quick Start
+
+### 1. Environment Requirements
+
+The code has been tested on a Linux (Ubuntu 22.04 LTS) workstation with Python 3.10. To set up the environment, follow these steps:
+
+```bash
+docker compose up
+pip install neo4j
+pip install networkx
+pip install kuzu
+pip install numpy
+pip install pandas
+```
+
+### 2. Testing Graph-Processing Systems
+
+- **Neo4j GDBMS**: To test Neo4j, simply run:
+  ```bash
+  python ./databases/neo4j/test.py
+  ```
+
+- **Neo4j-GDS (Graph Data Science Library)**: To test specific algorithms, navigate to the corresponding directory. For example, to test triangle counting:
+  ```bash
+  cd ./graphs/neo4j/algorithms/triangle_counting
+  python triangle_counting.py
+  ```
+
+- **NetworkX**: To test using NetworkX, run:
+  ```bash
+  python ./graphs/networkx/entrance.py
+  ```
+
+- **Kuzu**: To test using Kuzu, run:
+  ```bash
+  python ./graphs/kuzu/launcher.py
+  ```
+
+## 📊 Reproducing Experiments
+
+All baseline methods are embedded in the `./baselines` directory.
+
+- To run **GraphGenie** for Kuzu, execute:
+  ```bash
+  python ./baselines/GraphGenie/run.py
+  ```
+
+- To run **GRev** for Kuzu, execute:
+  ```bash
+  python ./baselines/GRev/run.py
+  ```
+
+### Reproducing Code Coverage Results
+
+To reproduce the code coverage results:
+1. Manually compile **Kuzu v0.4.2** and install the **LCOV** tool.
+   - See [Kuzu Developer Guide](https://docs.kuzudb.com/developer-guide/) and [LCOV Documentation](https://lcov.readthedocs.io/en/latest/).
+   
+2. Once Kuzu and LCOV are set up, run:
+   ```bash
+   python ./graphs/kuzu/launcher.py
+   ```
+
+### Reproducing Task Coverage Results
+
+To reproduce the task coverage results, run:
+```bash
+python ./graphs/networkx/sample.py
+```
