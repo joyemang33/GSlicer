@@ -1,0 +1,9 @@
+**/__pycache__/
+*.pyc
+**/output_files/
+**/kuzu/data/
+**/.vscode/
+**/G/
+**/G1/
+**/G2/
+**/kuzu/logs/

@@ -1,0 +1,210 @@
+[
+    {
+        "Function": "trophic_levels",
+        "Return": "nodes : dict,     Dictionary of nodes with trophic level as the value.",
+        "Parameters": "G : DiGraph,     A directed networkx graph",
+        "Oracle": "node_dict",
+        "Directed": "TRUE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "communicability_betweenness_centrality",
+        "Return": "nodes : dictionary,     Dictionary of nodes with communicability betweenness as the value.",
+        "Parameters": "G: graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": "FALSE"
+    },
+    {
+        "Function": "in_degree_centrality",
+        "Return": "nodes : dictionary,     Dictionary of nodes with in-degree centrality as values.",
+        "Parameters": "G : graph,     A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "TRUE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "out_degree_centrality",
+        "Return": "nodes : dictionary,     Dictionary of nodes with out-degree centrality as values.",
+        "Parameters": "G : graph,     A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "TRUE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "dispersion",
+        "Return": "nodes : dictionary,     If u (v) is specified, returns a dictionary of nodes with dispersion,     score for all \"target\" (\"source\") nodes. If neither u nor v is,     specified, returns a dictionary of dictionaries for all nodes 'u' in the,     graph with a dispersion score for each node 'v'.",
+        "Parameters": "G : graph,     A NetworkX graph., u : node, optional,     The source for the dispersion score (e.g. ego node of the network)., v : node, optional,     The target of the dispersion score if specified., normalized : bool,     If True (default) normalize by the embededness of the nodes (u and v)., alpha, b, c : float,     Parameters for the normalization procedure. When \\`normalized\\` is True,,     the dispersion value is normalized by::",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "second_order_centrality",
+        "Return": "nodes : dictionary,    Dictionary keyed by node with second order centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX connected and undirected graph.",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "edge_current_flow_betweenness_centrality",
+        "Return": "nodes : dictionary,    Dictionary of edge tuples with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "approximate_current_flow_betweenness_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "betweenness_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "betweenness_centrality_subset",
+        "Return": "nodes : dictionary,    Dictionary of nodes with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "current_flow_betweenness_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "current_flow_betweenness_centrality_subset",
+        "Return": "nodes : dictionary,    Dictionary of nodes with betweenness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "load_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with centrality as the value.",
+        "Parameters": "G : graph,   A networkx graph.",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "current_flow_closeness_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with current flow closeness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "information_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with current flow closeness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "degree_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with degree centrality as the value.",
+        "Parameters": "G : graph,   A networkx graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "eigenvector_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with eigenvector centrality as the value.",
+        "Parameters": "G : graph,   A networkx graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": "FALSE"
+    },
+    {
+        "Function": "eigenvector_centrality_numpy",
+        "Return": "nodes : dictionary,    Dictionary of nodes with eigenvector centrality as the value.",
+        "Parameters": "G : graph,   A networkx graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "katz_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with Katz centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": "FALSE"
+    },
+    {
+        "Function": "katz_centrality_numpy",
+        "Return": "nodes : dictionary,    Dictionary of nodes with Katz centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": "FALSE"
+    },
+    {
+        "Function": "laplacian_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with Laplacian centrality as the value.",
+        "Parameters": "G : graph,     A networkx graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "percolation_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with percolation centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph.",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "subgraph_centrality",
+        "Return": "nodes : dictionary,    Dictionary of nodes with subgraph centrality as the value.",
+        "Parameters": "G: graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": "FALSE"
+    },
+    {
+        "Function": "closeness_centrality",
+        "Return": "nodes : dictionary,   Dictionary of nodes with closeness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "incremental_closeness_centrality",
+        "Return": "nodes : dictionary,   Dictionary of nodes with closeness centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "FALSE",
+        "MultiEdges": ""
+    },
+    {
+        "Function": "harmonic_centrality",
+        "Return": "nodes : dictionary,   Dictionary of nodes with harmonic centrality as the value.",
+        "Parameters": "G : graph,   A NetworkX graph",
+        "Oracle": "node_dict",
+        "Directed": "",
+        "MultiEdges": ""
+    }
+]
