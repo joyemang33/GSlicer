@@ -1,0 +1,9 @@
+{
+    "version": "kuzu v0.4.2",
+    "status": "fixed",
+    "data": "create.json",
+    "query1" : "MATCH (n1)-[]->(n2)-[*..6]->(n1:L2:L1:L3)-[:T0|:T3]-(n2:L0:L1:L2:L3) RETURN COUNT (*)",
+    "query2" : "MATCH (n1)-[]->(n2)-[*..6]->(n1:L2:L1:L3)-[]-(n2:L0:L1:L2:L3) RETURN COUNT (*)",
+    "expected result": "query1 has less count than query 2",
+    "real result": "query1: 3843168, query2: 1825"
+}

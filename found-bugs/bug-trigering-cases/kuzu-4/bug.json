@@ -1,0 +1,8 @@
+{
+    "version": "kuzu v0.4.3.23",
+    "status": "fixed",
+    "data": "create.json",
+    "query" : "MATCH (n1)-[]-(n2:L1:L0) WHERE (n2.p53 <> n1.p43) OR (n2.p29 = n1.p14) RETURN COUNT (*)",
+    "expected result": "a stable result",
+    "real result": "unstable return 0 or 109"
+}

@@ -1,0 +1,8 @@
+{
+    "version": "kuzu v0.4.2",
+    "status": "confirmed",
+    "data": "create.log",
+    "query" : "MATCH (n1)-[]-(n1)-[]-(n1) RETURN COUNT(*)",
+    "expected result": "0",
+    "real result": "4"
+}

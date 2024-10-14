@@ -1,0 +1,8 @@
+{
+    "version": "kuzu v0.4.2",
+    "status": "fixed",
+    "data": "create.json",
+    "query" : "MATCH (a) WHERE (a.p34 = 'aXKCUJeQQwHo') OR (a.p45 = true) RETURN COUNT (*)",
+    "expected result": "a stable result",
+    "real result": "unstably return 20 or 21."
+}
