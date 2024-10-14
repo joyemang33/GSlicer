@@ -1,0 +1,8 @@
+{
+    "version": "Neo4j 5.6.0",
+    "status": "fixed",
+    "data": "create.log",
+    "query" : "MATCH (n0) MATCH (n1) MATCH (n2) MATCH (n3) MATCH (n4) MATCH (n5) MATCH (n6) MATCH (n7) MATCH (n8) RETURN COUNT(*)",
+    "expected result": 9223372036854775808,
+    "real result": -9223372036854775808
+}

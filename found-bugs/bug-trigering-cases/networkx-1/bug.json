@@ -1,0 +1,8 @@
+{
+    "version": "NetworkX 3.1",
+    "status": "Confirmed, PR created, not merged yet",
+    "data": ["edges.json"],
+    "query" : "nx.trophic_levels(G)[0]",
+    "expected result": "Trophic levels are only defined for graphs where every node has a path from a basal node (basal nodes are nodes with no incoming edges",
+    "real result": 2.3804740887529764e+16
+}

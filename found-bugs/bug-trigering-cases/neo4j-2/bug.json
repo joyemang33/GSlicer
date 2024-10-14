@@ -1,0 +1,8 @@
+{
+    "version": "Neo4j 5.10.0",
+    "status": "fixed",
+    "data": ["G_node.csv", "G_edge.csv"],
+    "query" : "gds.triangleCount.stream(G, concurrency = 1)",
+    "expected result": 9,
+    "real result": 11
+}

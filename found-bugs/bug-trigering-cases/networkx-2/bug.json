@@ -1,0 +1,8 @@
+{
+    "version": "NetworkX 3.1",
+    "status": "fixed",
+    "data": ["edges.json"],
+    "query" : "nx.eigenvector_centrality_numpy(G)",
+    "expected result": "{1: 0.5, 2: 0.5, 3: 0.5, 4: 0.5}",
+    "real result": "{1: -0.14904837055016898, 2: -0.14904837055016898, 3: 0.6912196345853752, 4: 0.6912196345853752}"
+}
