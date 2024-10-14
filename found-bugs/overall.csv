@@ -1,0 +1,40 @@
+Target System,Category,Algorithm,Bug Type,Statu,Description
+Neo4j,GDBMS Query,Query Handling,Logic Bug,Fixed,Integer overflow when executing count(*) clauses
+Neo4j,Client,Graph Object,Crash,Fixed,Crash when constructing GDS object with only nodes
+Neo4j,Community Detection,Triangle Listing,Logic Bug,Duplicated,Returning non-existing triangles in gds.alpha.triangles when setting concurrency = 1
+Neo4j,Community Detection,Triangle Counting,Logic Bug,Fixed,Returning non-existing triangles in gds.triangleCount.stream
+NetworkX,Community Detection,Communicability,Logic Bug,Unconfirmed,Returning negative values due to the rounding in the eigenvectors calculation
+NetworkX,Centrality,Percolation Centrality,Crash,Fixed,Unexpected Crash in nx.percolation_centrality caused by KeyError: 0
+NetworkX,Centrality,Eigenvector Centrality,Logic Bug,Fixed,Unstable and Incorrect nx.eigenvector_centrality_numpy result when the graph is disconnected
+NetworkX,Community Detection,Trophic,Logic Bug,Confirmed,nx.trophic_levels returning strange INF values caused by insufficient checking for singular matrix
+NetworkX,Planar,Planar,Crash,Unconfirmed,KeyError Crash in nx.combinatorial_embedding_to_pos
+NetworkX,Assortativity,Degree Pearson,Crash,Confirmed,ValueError crash in nx.degree_pearson_correlation_coefficient when input graph with no edges
+NetworkX,Centrality,Reaching Centrality,Crash,Fixed,ZeroDivisionError in nx.global_reaching_centrality caused by the graph contains only one node.
+NetworkX,Hierarchy,Flow Hierarchy,Crash,Confirmed,ZeroDivisionError in nx.flow_hierarchy caused by the graph contains only one node.
+NetworkX,Link Analysis,HITS,Crash,Confirmed,ValueError in nx.hits caused by the graph contains only one node.
+NetworkX,MISC,Random Triad,Crash,Fixed,ValueError caused by nx.random_triad when the input graph contains less 3 nodes
+NetworkX,Centrality,Flow Betweeness,Crash,Confirmed,ZeroDivisionError in nx.current_flow_betweenness_centrality caused by the graph contains only one node.
+NetworkX,Centrality,Flow Betweeness,Crash,Confirmed,ZeroDivisionError in nx.approximate_current_flow_betweenness_centrality caused by the graph contains only one node.
+NetworkX,Centrality,Flow Betweeness,Crash,Confirmed,ZeroDivisionError in nx.edge_current_flow_betweenness_centrality caused by the graph contains only one node.
+NetworkX,MISC,Effective Size,Logic Bug,Confirmed,Incorrect behavior in nx.effective_size for the single node graph 
+NetworkX,MISC,K-Components,Crash,Confirmed,ValueError crash in nx.k_components when input graph with no edges
+NetworkX,MISC,Non-randomess,Crash,Confirmed,ZeroDivisionError in nx.non_randomess caused by the graph contains only one node.
+NetworkX,MISC,Random Spanning Tree,Crash,Fixed,nx.random_spanning_tree for a graph with a single node
+NetworkX,Centrality,Information Centrality,Logic Bug,Fixed,nx.information_centrality return incorrect result for a graph with a single node
+NetworkX,Centrality,Information Centrality,Crash,Fixed,nx.information_centrality crushes on a graph with a single node and self-loop
+NetworkX,MISC,Intersection Array,Crash,Confirmed,nx.intersection_array crashes for an empty graph
+NetworkX,MISC,Intersection Array,Crash,Confirmed,nx.intersection_array crashes a graph with a single edge
+NetworkX,Centrality,Rich Club Coefficient,Crash,Fixed,nx.rich_club_coefficien crashes for an empty graph
+NetworkX,Centrality,Rich Club Coefficient,Crash,Fixed,nx.rich_club_coefficien  key error for a graph with a single  node
+NetworkX,MISC,Negative Edge Cycle,Crash,Fixed,nx.negative_edge_cycle gets crashes for MultiDiGraph in two corner cases
+NetworkX,MISC,Negative Edge Cycle,Crash,Duplicated,nx.negative_edge_cycle gets crashes for MultiDiGraph in two corner cases
+KuzuGraph,Client,Graph Object,Crash,Fixed,Failed to convert the results of pattern matching with a variable path into a DataFrame
+KuzuGraph,GDBMS Query,Query Handling,Crash,Fixed,BinderException handle correct query
+KuzuGraph,GDBMS Query,Query Handling,Performance Bug,Confirmed,Hang for a simple query
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Confirmed,Inconsistent Behavior between Kuzu and Neo4j in Handling Self-Loops
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Duplicated,WHERE clause sometimes fails in filtering results but adding non-existing lines
+KuzuGraph,GDBMS Query,Query Handling,Crash,Fixed,Bug: IndexError: _Map_base::at in Kuzu v0.4.2 when executing Cypher query
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Fixed,Bug: unstable query result when execute predicate
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Fixed,Bug: Unexpectedly Larger Result When Adding a Constraint in Pattern Matching
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Confirmed,Bug: Suspicious results for MATCH query when replacing one (n1) to (n2)
+KuzuGraph,GDBMS Query,Query Handling,Logic Bug,Confirmed,Bug: Unstable query in Kuzu Nightly Builds 0.4.3.23
