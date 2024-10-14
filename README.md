@@ -71,3 +71,11 @@ To reproduce the task coverage results, run:
 ```bash
 python ./graphs/networkx/sample.py
 ```
+
+## 🐛 Found Bugs
+
+*To keep the double-blind rules, we have removed the original links for bug reports in the artifacts submission.*
+
+1. **GSlicer** detected 39 unique and previously unknown bugs, of which 34 have been fixed and confirmed by developers. The overall bug information can be found in `./found-bugs/overall.csv`.
+
+2. Triggering test cases for logic bugs can be found in `./found-bugs/cases`.
