@@ -1,0 +1,8 @@
+{
+    "version": "NetworkX 3.1",
+    "status": "Confirmed, PR created, not merged yet",
+    "data": ["nodes.json"],
+    "query" : "nx.effective_size(G)",
+    "expected result": "{0 : 0}",
+    "real result": "{0 : nan}"
+}

@@ -1,0 +1,8 @@
+{
+    "version": "NetworkX 3.1",
+    "status": "fixed",
+    "data": ["nodes.json"],
+    "query" : "nx.information_centrality(G)",
+    "expected result": "Exception for undefined cases when no. nodes <= 3",
+    "real result": "{0 : inf}"
+}
