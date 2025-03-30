@@ -159,8 +159,6 @@ def reproduce():
 
 
 if __name__ == "__main__":
-    # reproduce()
-    # reproduce("MATCH (n) WHERE n.p IS NULL RETURN COUNT(*)")
     graph_id = int(sys.argv[1])
     for i in range(graph_id, graph_id + 1):
         if graph_id % 2 == 0:
@@ -169,11 +167,3 @@ if __name__ == "__main__":
         else:
             try: test_count_star(id = i)
             except: pass
-    # no_label = 10
-    # G = GraphData(_no_properties = random.randint(1, 100), _no_node_labels = no_label, \
-    #     _no_edge_labels = random.randint(1, 10), \
-    #     _no_nodes = random.randint(no_label, 50), _no_edges = random.randint(0, 100))
-    # client = KuzuClient(f"/home/mqy/GraphGenie/GraphGenie0923")
-    # G.export(client, f"./graphs/kuzu/logs/GraphGenie0923.json")
-    # print([x.name for x in G.node_labels])
-    # print([x.name for x in G.edge_labels])
