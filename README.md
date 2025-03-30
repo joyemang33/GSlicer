@@ -41,19 +41,6 @@ pip install pandas
   python ./graphs/kuzu/launcher.py
   ```
 
-## 📊 Reproducing Experiments
-
-All baseline methods are embedded in the `./baselines` directory.
-
-- To run **GraphGenie** for Kuzu, execute:
-  ```bash
-  python ./baselines/GraphGenie/run.py
-  ```
-
-- To run **GRev** for Kuzu, execute:
-  ```bash
-  python ./baselines/GRev/run.py
-  ```
 
 ### Reproducing Code Coverage Results
 
