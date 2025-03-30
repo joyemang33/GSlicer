@@ -34,6 +34,7 @@ pip install pandas
   ```bash
   python ./graphs/networkx/entrance.py
   ```
+  Note that for NetworkX, we do not provide instances for applying graph-cutting oracles. Users may implement them using the `./graphs/networkx/dp.json` file after running the above command.
 
 - **Kuzu**: To test using Kuzu, run:
   ```bash
