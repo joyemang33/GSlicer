@@ -67,7 +67,7 @@ class Tester():
     
     def execute(self, max_nodes=200, max_edges=1000, max_iter = 20):
 
-        with open("./graphs/networkx/dp.json", "r", encoding="utf-8") as f:
+        with open("./graphs/networkx/output.json", "r", encoding="utf-8") as f:
             algorithm_list = json.load(f)
 
         print("OK")

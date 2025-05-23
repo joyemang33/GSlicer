@@ -168,7 +168,7 @@ class Explorer:
         return result
     
     def analyze(self):
-        with open("./output.json", "r", encoding="utf-8") as f:
+        with open("./graphs/networkx/output.json", "r", encoding="utf-8") as f:
             L = json.load(f)
         s = set()
         for d in L: s.add(d["algorithm"])
@@ -184,11 +184,11 @@ if __name__ == "__main__":
         for j in range(0, 5):
             my_explorer = Explorer(i)
             result += my_explorer.run_explore()
-            with open("./output.json", "w", encoding="utf-8") as file:
+            with open("./graphs/networkx/output.json", "w", encoding="utf-8") as file:
                 json.dump(result, file)
             sum += my_explorer.analyze()
         ans[i] = sum / 5
-        with open("./output2.json", "w", encoding="utf-8") as file:
+        with open("./task_coverage.json", "w", encoding="utf-8") as file:
                 json.dump(ans, file)
         print(ans)
     
