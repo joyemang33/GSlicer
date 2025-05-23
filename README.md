@@ -35,7 +35,7 @@ pip install pandas
   python ./graphs/networkx/entrance.py
   ```
   Note that for NetworkX, we do not provide instances for applying graph-cutting oracles other than those identified by Algorithm 1. Users may implement them and add to `./graphs/networkx/output.json` file before running the above command.
-  You can get a basic `./graphs/networkx/output.json` file by reproducing the task coverage results (see below).
+  You can get the basic `./graphs/networkx/output.json` file by reproducing the task coverage results (see below).
 
 - **Kuzu**: To test using Kuzu, run:
   ```bash
