@@ -2,7 +2,7 @@
 
 An automated testing tool for graph-processing systems via Graph-cutting. The codebase for the paper ***"Finding Logic Bugs in Graph-processing Systems via Graph-cutting"***
 
-## 📰 Project Update:
+## 📰 Project Update
 
 We plan to actively maintain GSlicer and extend support for more algorithms in NetworkX (see `/graphs/networks/algs`). We warmly welcome contributions—feel free to open a pull request if you’d like to be part of the project!
 
