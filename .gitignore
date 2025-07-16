@@ -7,4 +7,6 @@
 **/G1/
 **/G2/
 **/kuzu/logs/
-**/venv/
+**/.devcontainer/
+output.json
+task_coverage.json
