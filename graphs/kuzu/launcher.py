@@ -159,6 +159,8 @@ def reproduce():
 
 
 if __name__ == "__main__":
+    os.makedirs("./graphs/kuzu/data", exist_ok=True)
+    os.makedirs("./graphs/kuzu/logs", exist_ok=True)
     graph_id = int(sys.argv[1])
     for i in range(graph_id, graph_id + 1):
         if graph_id % 2 == 0:

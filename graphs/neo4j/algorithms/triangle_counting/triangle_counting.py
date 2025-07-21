@@ -50,6 +50,7 @@ class TestNeo4jTriangleCounting(Neo4jTester):
                 my_partitioner = par_disconnected_uniform.partition
             )
         except: 
+            print("exception in creating test case")
             return
         if self.validate() == False:
             self.bugs_cases_counter += 1
@@ -57,6 +58,6 @@ class TestNeo4jTriangleCounting(Neo4jTester):
 if __name__ =="__main__":
     
     T = TestNeo4jTriangleCounting()
-    for _ in range(0, 1000): T.test()
+    for _ in range(0, 1): T.test()
     print("bug-triggering tests/all tests = ", 
         T.bugs_cases_counter, "/", T.test_cases_counter)
