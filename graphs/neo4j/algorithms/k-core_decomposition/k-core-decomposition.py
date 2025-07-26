@@ -57,7 +57,7 @@ class TestNeo4jKcore(Neo4jTester):
 if __name__ =="__main__":
     
     T = TestNeo4jKcore()
-    for i in range(0, 1000): 
+    for i in range(0, 10): 
         if i % 100 == 0: print(str(i/10)+"%") 
         T.test()
     

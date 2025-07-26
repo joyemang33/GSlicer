@@ -181,13 +181,13 @@ if __name__ == "__main__":
     result = []
     for i in range(1, 10):
         sum = 0
-        for j in range(0, 5):
+        for j in range(0, 1):
             my_explorer = Explorer(i)
             result += my_explorer.run_explore()
             with open("./graphs/networkx/output.json", "w", encoding="utf-8") as file:
                 json.dump(result, file)
             sum += my_explorer.analyze()
-        ans[i] = sum / 5
+        ans[i] = sum / 1
         with open("./task_coverage.json", "w", encoding="utf-8") as file:
                 json.dump(ans, file)
         print(ans)

@@ -76,5 +76,5 @@ class TestNeo4jTriangleListing(Neo4jTester):
 if __name__ =="__main__":
     
     T = TestNeo4jTriangleListing()
-    for _ in range(0, 1000): T.test()
+    for _ in range(0, 10): T.test()
     print("bug-triggering tests/all tests = ", T.bugs_cases_counter, "/", T.test_cases_counter)

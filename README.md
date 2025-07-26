@@ -2,9 +2,19 @@
 
 An automated testing tool for graph-processing systems via Graph-cutting. The codebase for the paper ***"Finding Logic Bugs in Graph-processing Systems via Graph-cutting"***
 
-## 📰 Project Update
+## 📰 Artifacts Evaluation.
+We provide a `script.py` to simplify the artifact evaluation and environment setup.
 
-We plan to actively maintain GSlicer and extend support for more algorithms in NetworkX (see `/graphs/networks/algs`). We warmly welcome contributions—feel free to open a pull request if you’d like to be part of the project!
+```bash
+sudo apt install docker-compose
+python3.10 -m venv venv
+python3.10 script.py
+```
+
+After running the script, a `task_coverage.json` file will be generated in the root directory.
+
+To save time, each testing target will execute a limited number of queries. Therefore, the coverage results may also be different from which in the paper.
+
 
 
 ## 🚀 Quick Start

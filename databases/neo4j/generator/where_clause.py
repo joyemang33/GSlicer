@@ -9,7 +9,7 @@ class BasicWhereGenerator:
 
     def __gen_single_exp(self, assigned_v1):
         v1 = random.choice(self.vars) if assigned_v1 is None else assigned_v1
-        p1 = random.sample(self.G.prop.keys(), 1)[0]
+        p1 = random.sample(sorted(self.G.prop.keys()), 1)[0]
         if self.G.prop[p1] == "int":
             sgn = random.choice(["=", ">", "<", ">=", "<=", "<>"])
         else:

@@ -43,7 +43,12 @@ class Neo4jTester:
 
 if __name__ == "__main__":
     session = Neo4jTester()
-    for _ in range(0, 100):
-        session.test("test", 1000)
+    #create ./databases/neo4j/generator/output_files/ if not exist:
+    import os
+    if not os.path.exists("./databases/neo4j/generator/output_files/"):
+        os.makedirs("./databases/neo4j/generator/output_files/")
+    
+    for _ in range(0, 1):
+        session.test("test", 1)
 
 

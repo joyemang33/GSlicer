@@ -35,7 +35,7 @@ class TestNeo4jSCC(Neo4jTester):
 
         
         res_G = self.gds.alpha.scc.stream(self.G).to_dict('records')
-        res_G0 = self.gds.alpha.scc.stream(self.G0, concurrency=12).to_dict('records')
+        res_G0 = self.gds.alpha.scc.stream(self.G0).to_dict('records')
         res_G1 = self.gds.alpha.scc.stream(self.G1).to_dict('records')
         
         d_G, d_G0, d_G1 = dict(), dict(), dict()
@@ -96,7 +96,7 @@ class TestNeo4jSCC(Neo4jTester):
 if __name__ =="__main__":
     
     T = TestNeo4jSCC()
-    for i in range(0, 1000): 
+    for i in range(0, 10): 
         print(i)
         if i % 100 == 0: print(str(i/10)+"%") 
         T.test()

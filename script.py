@@ -183,13 +183,16 @@ def main():
     print("\n==== Step 5: Executing Test Commands ====")
     commands = [
         "python -m databases.neo4j.test",
+        "python -m graphs.neo4j.algorithms.triangle_counting.triangle_counting",
+        "python -m graphs.neo4j.algorithms.triangle_listing.triangle_listing",
         "python -m graphs.networkx.sample",
-        "python -m graphs.networkx.entrance",
-        "python -m graphs.kuzu.launcher"
+        "export PYTHONPATH=. && python ./graphs/networkx/entrance.py",
+        "python -m graphs.kuzu.launcher 1"
     ]
     
     for cmd in commands:
-        print(f"\nExecuting command: {cmd}")
+        print(f"\nNow executing command: {cmd}")
+        input("Press Enter to continue")
         process = subprocess.Popen(
             cmd,
             shell=True,

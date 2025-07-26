@@ -65,12 +65,13 @@ class Tester():
         passed, error_msg  = validate_rule(res, res0, res1)
         return passed, error_msg
     
-    def execute(self, max_nodes=200, max_edges=1000, max_iter = 20):
+    def execute(self, max_nodes=20, max_edges=100, max_iter = 1):
 
         with open("./graphs/networkx/output.json", "r", encoding="utf-8") as f:
+            print("Loading algorithm list...")
             algorithm_list = json.load(f)
 
-        print("OK")
+        print("Starting tests...")
         for allow_loops in [True, False]:
             for allow_parallel_edge in [True, False]:
                 for is_directed in [True, False]:
@@ -107,8 +108,8 @@ class Tester():
                                     continue
                                 if not passed:
                                     print(error_message)
-                                    print("!") 
 
 if __name__ == "__main__":
+    print("Hello")
     T = Tester()
     T.execute()
