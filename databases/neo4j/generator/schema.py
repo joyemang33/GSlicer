@@ -64,7 +64,8 @@ class GraphSchema:
 
 
             for i in range(0, edge_num):
-                id0, id1 = random.randint(0, node_num), random.randint(0, node_num)
+                id0 = random.randint(0, node_num - 1)
+                id1 = random.randint(0, node_num - 1)
                 id0 += node_offset
                 id1 += node_offset
                 statement = "MATCH (n0 {id : " + str(id0) + "}), (n1 {id : " + str(id1) + "}) "
@@ -89,4 +90,3 @@ class GraphSchema:
 if __name__ == "__main__":
     G = GraphSchema()
     G.gen()
-

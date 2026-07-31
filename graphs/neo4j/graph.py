@@ -116,7 +116,6 @@ def neo4j_load_graph(G : BasicGraph, partition_arr,
 if __name__ == "__main__":
     basic_generator = BasicGenerator()
     basic_G, partition_arr = basic_generator.gen(6, 10)
-    G, G0, G1 = neo4j_load_graph(basic_G, partition_arr)
+    G, G0, G1, *_ = neo4j_load_graph(basic_G, partition_arr)
     print("OK")
-
 

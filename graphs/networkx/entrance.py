@@ -27,6 +27,9 @@ def time_limit(seconds):
 class Tester():
     def __init__(self):
         self.rules = {
+            "sum_smaller": sum_smaller,
+            "sum_equal": sum_equal,
+            "sum_greater": sum_greater,
             "node_dict_smaller" : node_dict_smaller, 
             "node_dict_equal" : node_dict_equal, 
             "node_dict_greater" : node_dict_greater, 
@@ -102,7 +105,7 @@ class Tester():
                             for G, G0, G1 in Graphs:
                                 try:
                                     passed, error_message = self.run_testcase(
-                                        target["algorithm"], G, G0, G1, target["rules"])
+                                        target["algorithm"], G, G0, G1, self.rules[target["rules"]])
                                 except:
                                     continue
                                 if not passed:

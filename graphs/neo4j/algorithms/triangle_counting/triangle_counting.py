@@ -41,6 +41,7 @@ class TestNeo4jTriangleCounting(Neo4jTester):
         for v in d_G1.keys():
             if d_G1[v] != d_G[v]: 
                 return False
+        return True
             
     def test(self):
         try:
