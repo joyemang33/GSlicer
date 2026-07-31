@@ -19,7 +19,11 @@ def partition(G : GraphData):
     no_nodes_G2 = G.no_nodes - no_nodes_G1
     
     #Determine the id of nodes in each sub-graphs
-    nodes_id_G1 = np.random.choice(range(0, G.no_nodes), no_nodes_G1)
+    nodes_id_G1 = np.random.choice(
+        range(0, G.no_nodes),
+        no_nodes_G1,
+        replace=False,
+    )
     nodes_id_G2 = []
     for i in range(0, G.no_nodes):
         if i not in nodes_id_G1:
@@ -66,8 +70,8 @@ def partition_2CC(G : GraphData):
             G.nodes.append(node)
         for edge in subG.edges:
             G.edges.append(edge)
-    G.no_nodes = G1.no_nodes + G2.no_edges
-    G.no_edges = G2.no_edges + G2.no_edges
+    G.no_nodes = G1.no_nodes + G2.no_nodes
+    G.no_edges = G1.no_edges + G2.no_edges
     return G, G1, G2
     
 if __name__ == "__main__":
@@ -81,4 +85,3 @@ if __name__ == "__main__":
     G.export(client_G)
     G1.export(client_G1)
     G2.export(client_G2)
-

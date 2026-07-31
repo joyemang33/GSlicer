@@ -53,11 +53,13 @@ def test_count_star(max_iteration = 100, id = 0):
             continue
         try: res_G1 = client_G1.run(query).get_as_df().values.tolist()[0][0]
         except Exception as e:
+            msg = str(e)
             if "Parser exception" not in msg and "Binder exception" not in msg and "Interrupted" not in msg:
                 exceptions.append((query, msg))   
             continue
         try: res_G2 = client_G2.run(query).get_as_df().values.tolist()[0][0]
         except Exception as e:
+            msg = str(e)
             if "Parser exception" not in msg and "Binder exception" not in msg and "Interrupted" not in msg:
                 exceptions.append((query, msg))   
             continue
@@ -124,11 +126,13 @@ def test_count_star_2CC(max_iteration = 100, id = 0):
             continue
         try: res_G1 = client_G1.run(query).get_as_df().values.tolist()[0][0]
         except Exception as e:
+            msg = str(e)
             if "Parser exception" not in msg and "Binder exception" not in msg and "Interrupted" not in msg:
                 exceptions.append((query, msg))   
             continue
         try: res_G2 = client_G2.run(query).get_as_df().values.tolist()[0][0]
         except Exception as e:
+            msg = str(e)
             if "Parser exception" not in msg and "Binder exception" not in msg and "Interrupted" not in msg:
                 exceptions.append((query, msg))   
             continue
